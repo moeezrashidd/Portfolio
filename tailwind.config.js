@@ -1,16 +1,10 @@
+
+
 // tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {
-      fontFamily: {
-        Graphik: ['Graphik', 'inter' , 'sans-serif']
-      }
-    },
-  },
-  plugins: [],
-}
+export const content = [
+  "./src/**/*.{js,jsx,ts,tsx}", // important!
+];
+export const theme = {
+  extend: {},
+};
+export const plugins = [];
