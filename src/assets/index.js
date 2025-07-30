@@ -21,8 +21,10 @@ import vector from './Vector.png'
 import frame from './frame.png'
 import imgBG from './ImgBG.png'
 import me from './me.png'
+import my from './1.png'
+
 import intro from './intro.mp4'
 
 export {
-    analogueClock, countries, CRUD, currencyConverter, digitalColock, netflix, pokemon, portfolio, QRcode, rockPaperGame, ultraEdit, spotify, weatherApp, logo, rectangle2, rectangle1, add, triangle, circle, vector, frame, imgBG ,me ,intro
+    analogueClock, countries, CRUD, currencyConverter, digitalColock, netflix, pokemon, portfolio, QRcode, rockPaperGame, ultraEdit, spotify, weatherApp, logo, rectangle2, rectangle1, add, triangle, circle, vector, frame, imgBG ,me ,intro ,my
 }

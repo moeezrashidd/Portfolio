@@ -3,6 +3,7 @@ import Footer from "./components/footer"
 import Hero from "./components/hero"
 import Nav from "./components/navbar"
 import Reviews from "./components/reviews"
+import Skills from "./components/skills"
 import Work from "./components/work"
 
 function App() {
@@ -10,16 +11,17 @@ function App() {
 
   return (
 
-      <div className= "  sm:px-28 px-6 bg-[#1E1E20] text-white font-Graphik overflow-x-hidden">
+    <div className="sm:px-16 px-2  bg-[#1E1E20] text-white font-Graphik overflow-x-hidden">
 
-        <Nav />
-        <Hero />
-        <About />
-        <Work />
-        <Reviews />
-        <Footer />
-      </div>
-  
+      <Nav />
+      <Hero />
+      <About />
+      <Skills />
+      <Work />
+      <Reviews />
+      <Footer />
+    </div>
+
   )
 }
 

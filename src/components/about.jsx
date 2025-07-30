@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react'
 import { intro } from '../assets'
 import { FaPlay, FaPause } from "react-icons/fa6";
+import MainCompText from './subComp/mainCompText';
+import { aboutTxt } from '../data/data';
 function About() {
 
     const [Isplaying, setIsplaying] = useState(false)
@@ -18,11 +20,7 @@ function About() {
 
     return (
         <>
-            <div className="about-txt flex gap-10 justify-evenly items-center  ">
-                <h1 className="text-4xl font-extrabold tracking-wide ">Why Dev In Dark Best Choice? </h1>
-
-                <p className="text-[#E7E7E7]">Watch this one minute video so you understand why you should use our services!</p>
-            </div>
+            <MainCompText data={aboutTxt}/>
             <div className="scroll-border mt-5 relative player">
                 <video src={intro} id='introVideo' ref={videoref} className=' w-full z-10  ' >
                 </video>

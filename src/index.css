@@ -1,10 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 * {
-    padding: 0;
-    margin: 0;
+   
     box-sizing: border-box;
 }
 
@@ -31,9 +28,9 @@
     z-index: -1;
     background: conic-gradient(from 0deg,
             transparent 0deg 90deg,
-            #5454D4 90deg 135deg,
+            #3737FF 90deg 135deg,
             transparent 135deg 270deg,
-            #5454D4 270deg 315deg,
+        #3737FF 270deg 315deg,
             transparent 315deg 360deg);
     background-size: 100% 100%;
     transform: rotate(0deg);
