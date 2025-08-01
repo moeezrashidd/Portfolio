@@ -1,16 +1,11 @@
-import analogueClock from './analogueClock.png'
-import countries from './countries.png'
-import CRUD from './CRUD.png'
-import currencyConverter from './currencyConverter.png'
-import digitalColock from './digitalColock.png'
-import netflix from './netflix.png'
-import pokemon from './pokemon.png'
+
+import portfolio1 from './portfolio (1).png'
+import portfolio2 from './portfolio (2).png'
+import portfolio3 from './portfolio (3).png'
+import portfolio4 from './portfolio (4).png'
+import portfolio5 from './portfolio (5).png'
 import portfolio from './portfolio.png'
-import QRcode from './QRcode.png'
-import rockPaperGame from './rockPaperGame.png'
-import ultraEdit from './ultraEdit.png'
-import spotify from './spotify.png'
-import weatherApp from './weatherApp.png'
+
 import logo from './logo.png'
 import rectangle2 from './rectangle2.png'
 import rectangle1 from './rectangle1.png'
@@ -26,5 +21,5 @@ import my from './1.png'
 import intro from './intro.mp4'
 
 export {
-    analogueClock, countries, CRUD, currencyConverter, digitalColock, netflix, pokemon, portfolio, QRcode, rockPaperGame, ultraEdit, spotify, weatherApp, logo, rectangle2, rectangle1, add, triangle, circle, vector, frame, imgBG ,me ,intro ,my
+portfolio, logo, rectangle2, rectangle1, add, triangle, circle, vector, frame, imgBG ,me ,intro ,my, portfolio1 , portfolio2 , portfolio3 , portfolio4 , portfolio5
 }
