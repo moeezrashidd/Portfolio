@@ -1,4 +1,5 @@
 import About from "./components/about"
+import Experience from "./components/experience"
 import Footer from "./components/footer"
 import Hero from "./components/hero"
 import Nav from "./components/navbar"
@@ -18,6 +19,7 @@ function App() {
       <About />
       <Skills />
       <Work />
+      <Experience />
       <Reviews />
       <Footer />
     </div>

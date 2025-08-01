@@ -4,7 +4,7 @@ import AutoSlider from "./imgSlider";
 const ProjectCard = ({item}) => {
   return (
   
-      <Tilt className="   w-full md:w-[47%] lg:w-[32%] max-h-1/2  flex flex-col justify-start items-start  gap-2 bg-[#262629]   px-3 py-5 rounded-2xl"
+      <Tilt className="   w-full sm:w-[47%] lg:w-[32%] max-h-1/2  flex flex-col justify-start items-start  gap-2 bg-[#262629]   px-3 py-5 rounded-xl"
           >
    
               <AutoSlider images={item.img} />

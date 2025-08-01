@@ -163,3 +163,32 @@ export const projects = [
 
     },
 ].reverse()
+
+
+//******************/ EXPERINECE sECTION/*******************
+
+export const experiences = [
+    {
+        company: "Google",
+        role: "Frontend Engineer",
+        duration: "2021 - Present",
+        description: "Worked on optimizing search UI components.",
+    },
+    {
+        company: "Meta",
+        role: "React Developer",
+        duration: "2019 - 2021",
+        description: "Built internal dashboards using React & GraphQL.",
+    },
+    {
+        company: "Shopify",
+        role: "UI Engineer",
+        duration: "2017 - 2019",
+        description: "Contributed to design system and component library.",
+    }, {
+        company: "Google",
+        role: "Frontend Engineer",
+        duration: "2021 - Present",
+        description: "Worked on optimizing search UI components.",
+    },
+];
