@@ -60,3 +60,15 @@
 .player:hover  .play-btn {
     visibility: visible;
 }
+
+
+
+/****************** SCROLL BAR CSS*************** */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

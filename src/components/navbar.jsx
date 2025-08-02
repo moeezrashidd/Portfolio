@@ -10,11 +10,16 @@ function Nav() {
 
     return (
         <>
-            <div className="z-50  py-4 flex justify-between items-center relative max-w-7xl ">
+            <motion.div
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeIn" }}
+                className="z-50  py-4 flex justify-between items-center relative max-w-7xl ">
 
                 <div className="logo flex items-center gap-3">
-                    <img src={logo} alt="Logo" className="w-12 h-12 rounded-3xl" />
-                    <span className="text-white font-semibold sm:text-xl  ">Dev In Dark</span>
+                    <img src={logo} alt="Logo" className="w-12 h-12 rounded-3xl border border-black" />
+                    <span className="text-white font-semibold sm:text-xl  ">Moeez Rashid</span>
                 </div>
 
 
@@ -39,9 +44,9 @@ function Nav() {
                     >
                         {!isOpen ? <IoMdMenu /> : <IoMdClose />}
                     </span>
-                    <span className='contact text-[#E7E7E7] border border-[#E7E7E7] md:px-7 px-2 py-1 rounded-lg cursor-pointer hover:border-indigo-500  '> Contact </span>
+                    <span className='contact text-[#E7E7E7] border border-[#E7E7E7] md:px-7 px-2 py-1 rounded-lg cursor-pointer hover:border-indigo-500  '> <a href="#contact">  Contact</a> </span>
                 </div>
-            </div>
+            </motion.div>
 
 
             {isOpen && (<div className="relative -right-[10%] top[10%] md:hidden  w-full">
@@ -50,12 +55,12 @@ function Nav() {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            initial={{ opacity: 0, x: 100, y: -40 }}     
-                            animate={{ opacity: 1,y:0  }}         
+                            initial={{ opacity: 0, x: 100, y: -40 }}
+                            animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, x: 100, y: -40 }}
                             transition={{ duration: 0.3 }}
                             className="absolute top-[110%]  w-1/2 bg-gray-900 shadow-md mt-2 z-50 p-4 flex flex-col gap-2"
-                            
+
                         >
                             {items.map((item, index) => (
                                 <span
