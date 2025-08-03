@@ -49,14 +49,14 @@ import triangle from './triangle.png'
 import circle from './circle.png'
 import vector from './Vector.png'
 import frame from './frame.png'
-import imgBG from './ImgBG.png'
+import imgBG from './ImgBg.png'
 import my from './1.png'
 import intro from './intro.mp4'
-import C from './C.svg'
+
 
 
 
 
 export {
-    portfolio, logo, rectangle2, rectangle1, add, triangle, circle, vector, frame, imgBG, intro, my, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, analogueClock, digitalClock, QRcode, weatherApp, slider, currencyConverter, rockPaperGame, Store1, Store2, Store3, Store4, Store5, Store6, netflix, netflix2, netflix3, netflix4, netflix1, spotify, spotify1, spotify2, spotify3, UltraEdit, UltraEdit2, UltraEdit3, UltraEdit1, TodoApp, CRUD, pokemon, signInFormik, countries, countries2, countries3, countries4, countries5, countries1 ,C
+    portfolio, logo, rectangle2, rectangle1, add, triangle, circle, vector, frame, imgBG, intro, my, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, analogueClock, digitalClock, QRcode, weatherApp, slider, currencyConverter, rockPaperGame, Store1, Store2, Store3, Store4, Store5, Store6, netflix, netflix2, netflix3, netflix4, netflix1, spotify, spotify1, spotify2, spotify3, UltraEdit, UltraEdit2, UltraEdit3, UltraEdit1, TodoApp, CRUD, pokemon, signInFormik, countries, countries2, countries3, countries4, countries5, countries1 
 }

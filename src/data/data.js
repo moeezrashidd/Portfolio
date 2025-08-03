@@ -26,7 +26,7 @@ export const aboutTxt = {
 import { FaHtml5, FaCuttlefish , FaCss3Alt, FaJsSquare, FaReact, FaPython, FaGitAlt, FaGithub } from "react-icons/fa";
 import { SiTailwindcss, SiMysql, SiDjango, SiRedux, SiReacthookform, SiFormik } from "react-icons/si";
 import { AiOutlineConsoleSql } from "react-icons/ai";
-import { C } from "../assets";
+
 
 export const skills = [
     {
