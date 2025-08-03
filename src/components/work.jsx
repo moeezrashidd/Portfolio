@@ -10,8 +10,9 @@ function Work() {
     const [recentProjects, setrecentProjects] = useState([])
     const [ShowingMore, setShowingMore] = useState(true)
 
+
     useEffect(() => {
-        if (projects.length > 6) { setrecentProjects(projects.slice(0,6)) }
+        if (projects.length > 6) { setrecentProjects(projects.slice(0, 6)) }
         else { setrecentProjects(projects) }
     }, [])
 
@@ -24,7 +25,7 @@ function Work() {
             console.log(projects.length)
         }
         else {
-            setrecentProjects(projects.slice(0,6))
+            setrecentProjects(projects.slice(0, 6))
             console.log("hello")
             setShowingMore(true)
 
@@ -34,7 +35,7 @@ function Work() {
 
 
     return (
-      <>          
+        <>
             <motion.div
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -43,34 +44,35 @@ function Work() {
                 id="ourProjects"
             >
 
+
+                <MainCompText data={projectTxt} />
+
+
+                <div className="skills-container flex justify-start items-center flex-wrap  gap-4 mt-1 overflow-hidden pb-3 pt-4 ">
+
                 
-            <MainCompText data={projectTxt} />
+
+                    {recentProjects.map((item, index) => {
+                        return <ProjectCard item={item} key={index} />
+                    })}
 
 
-            <div className="skills-container flex justify-start items-center flex-wrap  gap-4 mt-1 overflow-hidden pb-3 pt-4 ">
+                    <div className="flex items-center w-full mt-6 gap-3 px-2 sm:px-4">
+                        <div className="flex-1 h-px bg-[#E7E7E7]" />
 
+                        <button
+                            onClick={handleShowMore}
+                            className="text-sm sm:text-base border border-[#E7E7E7] hover:border-indigo-600 px-4 sm:px-6 py-1 rounded-full text-[#E7E7E7] whitespace-nowrap"
+                        >
+                            {ShowingMore ? "Show More " : "Show Less "}
+                        </button>
 
-                {recentProjects.map((item, index) => {
-                    return  <ProjectCard item={item} key={index} />
-                })}
-
-
-                <div className="flex items-center w-full mt-6 gap-3 px-2 sm:px-4">
-                    <div className="flex-1 h-px bg-[#E7E7E7]" />
-
-                    <button
-                        onClick={handleShowMore}
-                        className="text-sm sm:text-base border border-[#E7E7E7] hover:border-indigo-600 px-4 sm:px-6 py-1 rounded-full text-[#E7E7E7] whitespace-nowrap"
-                    >
-                        {ShowingMore ? "Show More " : "Show Less "}
-                    </button>
-
-                    <div className="flex-1 h-px bg-[#E7E7E7]" />
-                </div>
+                        <div className="flex-1 h-px bg-[#E7E7E7]" />
+                    </div>
 
 
                 </div>
-                </motion.div>
+            </motion.div>
         </>
 
     )
