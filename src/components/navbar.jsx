@@ -4,7 +4,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 function Nav() {
-    const items = ['Home', 'About us', 'Our projects', 'Services'];
+    const items = [{
+        section: 'Home',
+        id: 'home'
+    },
+    {
+        section: 'About us',
+        id: 'aboutUs'
+    },
+    {
+        section: 'Our projects',
+        id: "ourProjects"
+    },
+    {
+        section: 'Services',
+        id: 'Services'
+    }];
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -15,7 +30,7 @@ function Nav() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeIn" }}
-                className="z-50  py-4 flex justify-between items-center relative max-w-7xl ">
+                className="z-50  mt-12  flex justify-between items-center relative  max-w-7xl ">
 
                 <div className="logo flex items-center gap-3">
                     <img src={logo} alt="Logo" className="w-12 h-12 rounded-3xl border border-black" />
@@ -24,13 +39,14 @@ function Nav() {
 
 
 
-                <div className="options md:flex gap-6 flex-row items-center  hidden ">
+                <div className="options md:flex gap-6 flex-row items-center  hidden  ">
                     {items.map((item, index) => (
                         <span
                             key={index}
+                       
                             className="text-gray-300 hover:text-indigo-500 text-base cursor-pointer transition-colors duration-200 hover:borderindigo-500 hover:border-b-2  "
                         >
-                            {item}
+                            <a href={`#${item.id}`}>{item.section}</a>
                         </span>
                     ))}
                 </div>
@@ -44,11 +60,13 @@ function Nav() {
                     >
                         {!isOpen ? <IoMdMenu /> : <IoMdClose />}
                     </span>
-                    <span className='contact text-[#E7E7E7] border border-[#E7E7E7] md:px-7 px-2 py-1 rounded-lg cursor-pointer hover:border-indigo-500  '> <a href="#contact">  Contact</a> </span>
+                    <span className='contact text-[#E7E7E7] border border-[#E7E7E7] md:px-7 px-2 py-1 rounded-lg cursor-pointer hover:border-indigo-500  '
+                        onClick={() => window.location.href = `#Contact`}
+                    >   Contact</span>
                 </div>
             </motion.div>
 
-
+ 
             {isOpen && (<div className="relative -right-[10%] top[10%] md:hidden  w-full">
 
 
@@ -66,8 +84,9 @@ function Nav() {
                                 <span
                                     key={index}
                                     className="text-gray-300  hover:text-indigo-500 text-base cursor-pointer transition-colors duration-200 border-b border-gray-700 pb-1"
+                                    onClick={() => window.location.href = `#${item.id}`}
                                 >
-                                    {item}
+                                    {item.section}
                                 </span>
                             ))}
                         </motion.div>

@@ -34,7 +34,7 @@ const Footer = () => {
                 {/* Social Links */}
                 <div className="flex gap-4 text-xl">
                     <a
-                        href="https://github.com/"
+                        href="https://github.com/moeezrashid"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-indigo-400 transition duration-300 text-2xl"
@@ -58,7 +58,7 @@ const Footer = () => {
                         <FaFacebook />
                     </a>
                     <a
-                        href="https://github.com/"
+                        href="https://www.instagram.com/moeezrashidd"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-indigo-400 transition duration-300 text-2xl"
@@ -82,7 +82,7 @@ const Footer = () => {
                         <FaTwitter />
                     </a>
                     <a
-                        href="https://twitter.com/"
+                        href="https://www.fiverr.com/moeezrashidd/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-indigo-400 transition duration-300 text-2xl"
@@ -98,7 +98,7 @@ const Footer = () => {
                         <SiUpwork />
                     </a>
                     <a
-                        href="https://twitter.com/"
+                        href="https://www.tiktok.com/@moeezzrashid"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-indigo-400 transition duration-300 text-2xl"

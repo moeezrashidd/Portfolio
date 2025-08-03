@@ -41,7 +41,7 @@ function Hero() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.75, ease: "easeIn" }}
                             viewport={{ once: true, amount: 0.3 }}
-                        >  <img src={my} alt="" className="rounded-2xl rotate-[-24.2deg]  sm:w-[256px] w-full" /></motion.div>
+                        >  <img src={my} alt="" className="rounded-2xl rotate-[-24.2deg]  sm:w-[276px] w-full ml-4 " /></motion.div>
                     </div>
 
 

@@ -1,18 +1,38 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { Formik, useFormik } from "formik";
+import * as Yup from 'yup'
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
-    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+    const initialValues = { name: "", email: "", message: "" }
+    const validationSchema = Yup.object({
+        name: Yup.string().required("Requried filed").min(3).max(15),
+        email: Yup.string().email("Enter valid email").required("Requried filed"),
+        message:Yup.string().required("Requried filed")
 
-    const handleChange = (e) => {
-        setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-    };
+    })
+    const sendEmail = (values, actions) => {
+        const serviceID = 'service_tsw1cgj';
+        const templateID = 'template_iwvjqji';
+        const publicKey = 'CXKiv-L0gaStlYiHz';
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Form submitted:", formData);
-        setFormData({ name: "", email: "", message: "" });
-    };
+        emailjs.send(serviceID, templateID, values, publicKey).then(() => {
+            actions.resetForm();
+            alert('Message sent!');
+        }).catch(() => {
+            console.error('Error sending email:', errors);
+            alert('Failed to send message.');
+        })
+    }
+
+    const {handleSubmit , handleChange , handleBlur ,errors , values ,touched} = useFormik({
+        initialValues,
+        validationSchema,
+        validateOnBlur: false,
+        validateOnChange: true,
+        onSubmit: sendEmail
+    })
 
     return (
         <motion.div
@@ -21,6 +41,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            id="Contact"
         >
             <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
 
@@ -33,10 +54,11 @@ const Contact = () => {
                         type="text"
                         className="px-4 py-2 rounded-md bg-[#1E1E20] text-[#E7E7E7] border border-gray-600 focus:outline-none focus:border-indigo-500"
                         placeholder="Your name"
-                        value={formData.name}
+                        value={values.name}
                         onChange={handleChange}
-                        required
+                       onBlur={handleBlur}
                     />
+                    {errors.name && touched.name ? <p className="text-red-600">{errors.name}</p>:null}
                 </div>
 
                 <div className="flex flex-col">
@@ -47,10 +69,11 @@ const Contact = () => {
                         type="email"
                         className="px-4 py-2 rounded-md bg-[#1E1E20] text-[#E7E7E7] border border-gray-600 focus:outline-none focus:border-indigo-500"
                         placeholder="Your email"
-                        value={formData.email}
+                        value={values.email}
                         onChange={handleChange}
-                        required
+                       onBlur={handleBlur}
                     />
+                    {errors.email && touched.email ? <p className="text-red-600">{errors.email}</p> : null}
                 </div>
 
                 <div className="flex flex-col">
@@ -61,10 +84,11 @@ const Contact = () => {
                         rows="5"
                         className="px-4 py-2 rounded-md bg-[#1E1E20] text-[#E7E7E7] border border-gray-600 focus:outline-none focus:border-indigo-500 resize-none"
                         placeholder="Write your message..."
-                        value={formData.message}
+                        value={values.message}
                         onChange={handleChange}
-                        required
+                       onBlur={handleBlur}
                     ></textarea>
+                    {errors.message && touched.message ? <p className="text-red-600">{errors.message}</p> : null}
                 </div>
 
                 <motion.button

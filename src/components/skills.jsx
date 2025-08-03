@@ -8,6 +8,8 @@ function Skills() {
 
     return (
         <>
+            <div id="Services">
+
             <MainCompText data={skillTxt} />
 
 
@@ -30,6 +32,7 @@ function Skills() {
                 })}
 
             </div>
+                    </div>
         </>
     )
 }
