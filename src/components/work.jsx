@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 
 
 function Work() {
-    const [loading, setLoading] = useState(true)
     const [recentProjects, setrecentProjects] = useState([])
     const [ShowingMore, setShowingMore] = useState(true)
 
@@ -54,14 +53,7 @@ function Work() {
                 
 
                     {recentProjects.map((item, index) => {
-                        {
-                            loading && (
-                                <div className="absolute inset-0 flex justify-center items-center bg-black z-20">
-                                    <div className="loader"></div>
-                                </div>
-                            )
-                        } 
-                        return <ProjectCard item={item} key={index} onCanPlayThrough={() => setLoading(false)} />
+                        return <ProjectCard item={item} key={index} />
                     })}
 
 

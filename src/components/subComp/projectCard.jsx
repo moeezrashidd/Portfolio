@@ -1,7 +1,8 @@
 import React from 'react'
 import Tilt from 'react-parallax-tilt';
 import AutoSlider from "./imgSlider";
-import { motion } from 'framer-motion';
+
+
 const ProjectCard = ({item}) => {
   return (
   

@@ -1,8 +1,9 @@
-import { rectangle1, add, triangle, circle, vector, frame,  rectangle2, imgBG , my } from "../assets"
+import { rectangle1, add, triangle, circle, vector, frame, rectangle2, imgBG, my } from "../assets"
+import { useState } from "react";
 import { motion } from "framer-motion"
 function Hero() {
 
-
+    const [loading, setLoading] = useState(true);
     return (
         <>
             
@@ -41,7 +42,12 @@ function Hero() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.75, ease: "easeIn" }}
                             viewport={{ once: true, amount: 0.3 }}
-                        >  <img src={my} alt="" className="rounded-2xl rotate-[-24.2deg]  sm:w-[276px] w-full ml-4 " /></motion.div>
+                        >   {loading && (
+                            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-40 z-20">
+                                <div className="loader"></div>
+                            </div>
+                        )} 
+                            <img src={my} alt="" className="rounded-2xl rotate-[-24.2deg]  sm:w-[276px] w-full ml-4 " onLoad={() => setLoading(false)} /></motion.div>
                     </div>
 
 
