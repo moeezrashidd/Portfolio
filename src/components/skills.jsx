@@ -26,7 +26,7 @@ function Skills() {
                                     className={`flex justify-center items-center flex-col gap-2 cursor-pointer ${item.color} text-center`}
                                 >
                                     <Icon
-                                        className={`text-3xl sm:text-5xl md:text-6xl lg:text-7xl ${item.color}`}
+                                        className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl ${item.color}`}
                                         aria-label={item.name}
                                     />
                                     <span className="text-sm sm:text-base">{item.name}</span>
