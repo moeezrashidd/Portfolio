@@ -1,5 +1,6 @@
 import About from "./components/about"
 import Contact from "./components/Contact"
+import Experience from "./components/experience"
 
 import Footer from "./components/footer"
 import Hero from "./components/hero"
@@ -20,7 +21,7 @@ function App() {
       <About />
       <Skills />
       <Work />
-
+<Experience />
 
       <Contact />
       <Footer />
