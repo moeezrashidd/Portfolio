@@ -5,10 +5,10 @@ import MainCompText from "./subComp/mainCompText";
 
 function Skills() {
     return (
-        <div id="Services" className="py-10">
+        <div id="Services" className="py-10 px-4">
             <MainCompText data={skillTxt} />
 
-            <div className="skills-container flex justify-center items-center flex-wrap gap-5 mt-1 overflow-hidden pb-3">
+            <div className="skills-container flex justify-center items-center flex-wrap gap-5 mt-1 overflow-visible pb-3">
                 {skills.map((item, index) => {
                     const Icon = item.logo;
 
@@ -23,10 +23,10 @@ function Skills() {
                         >
                             <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15}>
                                 <span
-                                    className={`flex justify-center items-center flex-col gap-2 cursor-pointer ${item.color} sm:text-xl`}
+                                    className={`flex justify-center items-center flex-col gap-2 cursor-pointer ${item.color} text-center`}
                                 >
                                     <Icon
-                                        className={`sm:text-7xl text-4xl ${item.color}`}
+                                        className={`text-3xl sm:text-5xl md:text-6xl lg:text-7xl ${item.color}`}
                                         aria-label={item.name}
                                     />
                                     <span className="text-sm sm:text-base">{item.name}</span>
