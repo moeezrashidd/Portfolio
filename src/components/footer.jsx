@@ -3,12 +3,11 @@ import { logo } from "../assets";
 import {
     FaGithub,
     FaLinkedin,
-    FaTwitter,
     FaInstagram,
     FaYoutube,
     FaFacebook,
 } from "react-icons/fa";
-import { SiFiverr, SiUpwork, SiTiktok } from "react-icons/si";
+import { SiFiverr } from "react-icons/si";
 
 const Footer = () => {
     return (
@@ -74,36 +73,12 @@ const Footer = () => {
                         <FaLinkedin />
                     </a>
                     <a
-                        href="https://twitter.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-indigo-400 transition duration-300 text-2xl"
-                    >
-                        <FaTwitter />
-                    </a>
-                    <a
                         href="https://www.fiverr.com/moeezrashidd/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-indigo-400 transition duration-300 text-2xl"
                     >
                         <SiFiverr />
-                    </a>
-                    <a
-                        href="https://twitter.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-indigo-400 transition duration-300 text-2xl"
-                    >
-                        <SiUpwork />
-                    </a>
-                    <a
-                        href="https://www.tiktok.com/@moeezzrashid"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-indigo-400 transition duration-300 text-2xl"
-                    >
-                        <SiTiktok />
                     </a>
                 </div>
             </div>

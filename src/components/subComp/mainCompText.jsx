@@ -11,9 +11,9 @@ const MainCompText = ({data}) => {
       className="about-txt flex gap-10 my-10 sm:my4  sm:justify-between  justify-center items-center "
     >
       
-          <h1 className="text-2xl sm:text-4xl font-bold tracking-wide  sm:font-extrabold ">{data.heading} </h1>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-wide">{data.heading}</h1>
 
-          <p className="text-[#E7E7E7] hidden sm:inline ">{data.para }</p>
+          <p className="text-[#E7E7E7] text-xs sm:text-sm max-w-sm hidden sm:inline">{data.para}</p>
       </motion.div>
   )
 }

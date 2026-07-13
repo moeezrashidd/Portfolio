@@ -7,9 +7,9 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
     const initialValues = { name: "", email: "", message: "" }
     const validationSchema = Yup.object({
-        name: Yup.string().required("Requried filed").min(3).max(15),
-        email: Yup.string().email("Enter valid email").required("Requried filed"),
-        message:Yup.string().required("Requried filed")
+        name: Yup.string().required("Required field").min(3).max(15),
+        email: Yup.string().email("Enter valid email").required("Required field"),
+        message:Yup.string().required("Required field")
 
     })
     const sendEmail = (values, actions) => {
@@ -43,7 +43,8 @@ const Contact = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             id="Contact"
         >
-            <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-center">Let's Build Something Together</h2>
+            <p className="text-center text-gray-400 max-w-md mx-auto mb-8 text-sm">Have a project in mind or want to explore collaboration opportunities? Drop a message below and I will get back to you shortly.</p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="flex flex-col">
