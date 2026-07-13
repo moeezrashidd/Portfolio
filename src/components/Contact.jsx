@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Formik, useFormik } from "formik";
+import { useFormik } from "formik";
 import * as Yup from 'yup'
 import emailjs from '@emailjs/browser';
+import { contactInfo } from '../data/data';
 
 
 const Contact = () => {
@@ -45,6 +46,36 @@ const Contact = () => {
         >
             <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-center">Let's Build Something Together</h2>
             <p className="text-center text-gray-400 max-w-md mx-auto mb-8 text-sm">Have a project in mind or want to explore collaboration opportunities? Drop a message below and I will get back to you shortly.</p>
+
+            {/* Contact Info Links */}
+            <div className="mb-8">
+                <h3 className="text-lg font-semibold text-center mb-4 text-white">Get in touch</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {contactInfo.map((item) => {
+                        const IconComp = item.icon;
+                        return (
+                            <a
+                                key={item.id}
+                                href={item.href}
+                                target={item.href.startsWith('http') ? "_blank" : undefined}
+                                rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                                className="group flex items-center justify-between gap-4 p-4 rounded-lg bg-[#1E1E20] border border-gray-700 hover:border-indigo-500/50 transition-colors"
+                            >
+                                <span className="flex items-center gap-3 min-w-0">
+                                    <span className={`w-10 h-10 rounded-lg ${item.bgColor} border border-gray-800 flex items-center justify-center`}>
+                                        <IconComp className={`${item.color}`} size={18} />
+                                    </span>
+                                    <span className="flex flex-col min-w-0">
+                                        <span className="text-sm text-gray-300 font-semibold leading-tight break-words">{item.label}</span>
+                                        <span className="text-xs text-gray-400 group-hover:text-white transition-colors break-words">{item.username}</span>
+                                    </span>
+                                </span>
+                                <span className="text-indigo-400 group-hover:text-indigo-300 transition-colors ml-2 flex-shrink-0 whitespace-nowrap">↗</span>
+                            </a>
+                        );
+                    })}
+                </div>
+            </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="flex flex-col">
